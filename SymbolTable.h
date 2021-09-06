@@ -7,18 +7,18 @@ private:
     string type;
     int scope; //0: global, 1, 2, 3, 4
     string value;
-    symbol *nextSymbol;
-public:
-    void insert ();
 };
 // insert, assign, begin/end, lookup, print, rprint
 class SymbolTable {
 public:
-    symbol* symbols;
+    vector<symbol> symbols;
+
+    
     SymbolTable() {}
     void run(string filename);
 
 private:
-    void process(string line);
+    bool process(string);
+    bool insert_process(smatch s);
 };
 #endif
