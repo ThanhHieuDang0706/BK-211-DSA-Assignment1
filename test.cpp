@@ -4,7 +4,7 @@
 #include <regex>
 
 using namespace std;
-
+regex cons_num("\\d+");
 
 regex ins("^(INSERT)\\s([a-zA-Z]\\w*)\\s(\\w+)");
 
@@ -25,12 +25,12 @@ int main () {
 // while (i != end)
 //    cout << " [" << *i++ << "]";
 
-    string s = "INSERT 2x number";
+    string s = "2";
     // not done
     // ^(ASSIGN)\s\w+\s(\d+|'.*')
     regex valid_identifier_name ("[a-zA-Z]\\w*");
     smatch match;
-    cout << regex_match(s, match, ins) << endl;
+    cout << regex_match(s, cons_num) << endl;
  
     
     //[0]: The whole match
