@@ -1,5 +1,5 @@
 #include "SymbolTable.h"
-#include "SymbolTable.cpp"
+
 using namespace std;
 
 void test(string filename)
@@ -16,10 +16,9 @@ void test(string filename)
     delete st;
 }
 
-int main(int argc, char **argv)
+int main()
 {
-    if (argc < 2)
-        return 1;
-    test(argv[1]);
+    string filename = "E:\\BK\\HL211\\CTDLGT\\assignment1\\testcase\\test1.txt";
+    test(filename);
     return 0;
 }
